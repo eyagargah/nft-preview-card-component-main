@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit";
+}
+
+main {
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0em 1.5em 1.5em 1.5em rgba(0, 0, 0, 0.3);
+}
+
+.card-img {
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-img::after {
+  --aqua: hsla(178, 100%, 50%, 0.5);
+  content: url(./images/icon-view.svg);
+  background: var(--aqua);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+.card-img:hover::after {
+  opacity: 1;
+}
+
+.card-img img {
+  width: 100%;
+  display: block;
+}
+
+.text-content {
+  padding: 23px 0;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 3vh;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.title a:hover {
+  color: hsl(178, 100%, 50%);
+  transition: all 0.5s ease;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: 300;
+}
+
+.description p {
+  font-weight: 300; 
+  font-size: 1em;
+  color: hsl(0, 0%, 100%, 0.4);
+  margin-bottom: 15px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price span {
+  color: hsl(178, 100%, 50%);
+  font-weight: 300;
+}
+
+.price img {
+  margin-right: 6px;
+}
+
+.countdown span {
+  color: hsl(0, 0%, 100%, 0.4);
+}
+
+.countdown img {
+  margin-right: 6px;
+}
+
+main .footer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  color: hsl(0, 0%, 100%, 0.4);
+}
+
+.footer a:hover {
+  color: hsl(178, 100%, 50%);
+  transition: all 0.5s ease;
+}
+
+.footer .user-image img {
+  width: 35px;
+  height: 35px;
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 50px;
+  margin-right: 15px;
+}
+
+@media only screen and (min-width: 425px) {
+  main {
+    max-width: 20em;
+    margin: 100px auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    max-width: 20em;
+    margin: 125px 70px 125px 70px;
+  }
+
+}
